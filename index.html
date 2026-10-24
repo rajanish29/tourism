@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bihar Tourism | Explore Bihar</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =====================================================
+                         NAVBAR
+===================================================== -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Bihar<span>Tourism</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        </nav>
+    </header>
+
+
+    <!-- =====================================================
+                       HERO SECTION
+===================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO</p>
+
+            <h1>Explore <span>Bihar</span></h1>
+
+            <p>
+                Discover the ancient history, beautiful destinations,
+                spiritual places, wildlife and rich culture of Bihar.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#destinations" class="btn">
+                    Explore Places
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Plan Your Trip
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                         SEARCH
+===================================================== -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <input type="text" id="searchInput" placeholder="Search Bihar destinations..." onkeyup="searchPlaces()">
+
+            <button onclick="searchPlaces()">
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                      DESTINATIONS
+===================================================== -->
+
+    <section class="section" id="destinations">
+
+        <div class="section-title">
+
+            <p>DISCOVER BIHAR</p>
+
+            <h2>Popular Destinations</h2>
+
+            <span>
+                Explore some of the most beautiful and historic places of Bihar.
+            </span>
+
+        </div>
+
+
+        <div class="destination-container" id="destinationContainer">
+
+
+            <!-- ================= PATNA ================= -->
+
+            <div class="destination-card">
+
+                <div class="destination-image" onclick="openDestination('Patna')">
+
+                    <img src="https://hindi.magadhatimes.com/wp-content/uploads/2023/11/famous-tourist-places-in-patna.jpg"
+                        alt="Patna">
+
+                    <div class="image-overlay">
+                        <span>Explore Patna →</span>
+                    </div>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Patna</h3>
+
+                    <p>
+                        The capital city of Bihar, known for its history,
+                        museums, markets and the Ganga River.
+                    </p>
+
+                    <button onclick="openDestination('Patna')">
+                        Explore Places →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BODH GAYA ================= -->
+
+            <div class="destination-card">
+
+                <div class="destination-image" onclick="openDestination('Bodh Gaya')">
+
+                    <img src="https://static2.tripoto.com/media/filter/tst/img/1820511/TripDocument/1577906167_mahabodhi_temple_3.jpeg"
+                        alt="Bodh Gaya">
+
+                    <div class="image-overlay">
+                        <span>Explore Bodh Gaya →</span>
+                    </div>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Bodh Gaya</h3>
+
+                    <p>
+                        A world-famous Buddhist pilgrimage destination
+                        associated with the enlightenment of Buddha.
+                    </p>
+
+                    <button onclick="openDestination('Bodh Gaya')">
+                        Explore Places →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= NALANDA ================= -->
+
+            <div class="destination-card">
+
+                <div class="destination-image" onclick="openDestination('Nalanda')">
+
+                    <img src="https://www.exploreourindia.com/backend/web/images/blog/5144_nalandauniversity.webp"
+                        alt="Nalanda">
+
+                    <div class="image-overlay">
+                        <span>Explore Nalanda →</span>
+                    </div>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Nalanda</h3>
+
+                    <p>
+                        Famous for the ancient Nalanda University and
+                        its remarkable archaeological remains.
+                    </p>
+
+                    <button onclick="openDestination('Nalanda')">
+                        Explore Places →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RAJGIR ================= -->
+
+            <div class="destination-card">
+
+                <div class="destination-image" onclick="openDestination('Rajgir')">
+
+                    <img src="https://t3.ftcdn.net/jpg/00/86/33/28/360_F_86332883_ZXujI7IQL8PtKEBILcFrJilWHSIjAWIa.jpg"
+                        alt="Rajgir">
+
+                    <div class="image-overlay">
+                        <span>Explore Rajgir →</span>
+                    </div>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Rajgir</h3>
+
+                    <p>
+                        A historic city surrounded by hills and famous
+                        for its Buddhist and Jain heritage.
+                    </p>
+
+                    <button onclick="openDestination('Rajgir')">
+                        Explore Places →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= VAISHALI ================= -->
+
+            <div class="destination-card">
+
+                <div class="destination-image" onclick="openDestination('Vaishali')">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGbQhPLJV6Zjc5juhzHvSgsQn0sE_y3IQVNz22TR7n0CTyQTc76TIZEqrV&s=10"
+                        alt="Vaishali">
+
+                    <div class="image-overlay">
+                        <span>Explore Vaishali →</span>
+                    </div>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Vaishali</h3>
+
+                    <p>
+                        An ancient historical city connected with Buddha
+                        and Jain traditions.
+                    </p>
+
+                    <button onclick="openDestination('Vaishali')">
+                        Explore Places →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= VALMIKI NAGAR ================= -->
+
+            <div class="destination-card">
+
+                <div class="destination-image" onclick="openDestination('Valmiki Nagar')">
+
+                    <img src="https://d26dp53kz39178.cloudfront.net/media/uploads/Travel_Guide_Images/Top_15_Activities_in_Valmiki_Nagar_Tiger_Reserve_for_a_Fun__KDULh2S.webp"
+                        alt="Valmiki Nagar">
+
+                    <div class="image-overlay">
+                        <span>Explore Valmiki Nagar →</span>
+                    </div>
+
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Valmiki Nagar</h3>
+
+                    <p>
+                        A beautiful natural destination known for forests,
+                        wildlife and scenic surroundings.
+                    </p>
+
+                    <button onclick="openDestination('Valmiki Nagar')">
+                        Explore Places →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p id="noResult" class="no-result">
+            No destination found.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+                          ABOUT
+===================================================== -->
+
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=1000&q=80"
+                alt="Bihar Culture">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="small-title">
+                ABOUT BIHAR
+            </p>
+
+            <h2>
+                Journey Through History & Culture
+            </h2>
+
+            <p>
+                Bihar is one of India's most historically and culturally
+                significant states. It has been an important center of
+                Buddhism, Jainism, education and ancient civilization.
+            </p>
+
+            <p>
+                From the ancient ruins of Nalanda to the peaceful temples
+                of Bodh Gaya, Bihar offers a unique travel experience.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <h3>6+</h3>
+                    <p>Major Destinations</p>
+                </div>
+
+                <div>
+                    <h3>2000+</h3>
+                    <p>Years of History</p>
+                </div>
+
+                <div>
+                    <h3>∞</h3>
+                    <p>Memories</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                       WHY VISIT
+===================================================== -->
+
+    <section class="section why-section">
+
+        <div class="section-title">
+
+            <p>WHY BIHAR?</p>
+
+            <h2>Experience Something Special</h2>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🏛️
+                </div>
+
+                <h3>Rich History</h3>
+
+                <p>
+                    Explore ancient monuments, universities and
+                    archaeological sites.
+
+                    🏛️ Rich History
+                    Ancient monuments and historical sites
+                    Nalanda and Vikramshila ancient universities
+                    Mahabodhi Temple and Buddhist heritage
+                    Mauryan and Gupta period history
+                    Archaeological sites and museums
+                    Historical forts, stupas and ruins
+                    Birthplace of famous historical personalities
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🛕
+                </div>
+
+                <h3>Spirituality</h3>
+
+                <p>
+                    Visit important Buddhist, Jain and Hindu
+                    pilgrimage destinations.
+                    personalities
+                    🛕 Spirituality
+                    Mahabodhi Temple, Bodh Gaya
+                    Buddhist pilgrimage sites
+                    Hindu temples and sacred places
+                    Jain pilgrimage destinations
+                    Ganga and religious traditions
+                    Festivals like Chhath Puja
+                    Peaceful meditation and spiritual experiences
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🌳
+                </div>
+
+                <h3>Nature</h3>
+
+                <p>
+                    Enjoy forests, wildlife and beautiful natural
+                    landscapes.
+                    experiences
+                    🌳 Nature
+                    Beautiful forests and greenery
+                    Valmiki Tiger Reserve
+                    Wildlife and bird watching
+                    Ganga and other rivers
+                    Waterfalls and natural landscapes
+                    Eco-tourism destinations
+                    Sunrise, sunset and scenic views
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🍲
+                </div>
+
+                <h3>Food & Culture</h3>
+
+                <p>
+                    Taste traditional Bihar cuisine and experience
+                    its colorful culture.
+                    views
+                    🍲 Food & Culture
+                    Traditional Bihari cuisine
+                    Famous Litti Chokha
+                    Sattu-based dishes
+                    Thekua and traditional sweets
+                    Madhubani painting and local art
+                    Folk music and traditional dances
+                    Colorful festivals and cultural celebrations
+                    Traditional handicrafts and local markets
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                         GALLERY
+===================================================== -->
+
+    <section class="section" id="gallery">
+
+        <div class="section-title">
+
+            <p>TRAVEL MOMENTS</p>
+
+            <h2>Bihar Gallery</h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <img src="https://hindi.magadhatimes.com/wp-content/uploads/2023/11/famous-tourist-places-in-patna.jpg"
+                alt="Patna">
+
+            <img src="https://www.exploreourindia.com/backend/web/images/blog/5144_nalandauniversity.webp"
+                alt="Nalanda">
+
+            <img src="https://static2.tripoto.com/media/filter/tst/img/1820511/TripDocument/1577906167_mahabodhi_temple_3.jpeg"
+                alt="Bodh Gaya">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGbQhPLJV6Zjc5juhzHvSgsQn0sE_y3IQVNz22TR7n0CTyQTc76TIZEqrV&s=10"
+                alt="Vaishali">
+
+            <img src="https://d26dp53kz39178.cloudfront.net/media/uploads/Travel_Guide_Images/Top_15_Activities_in_Valmiki_Nagar_Tiger_Reserve_for_a_Fun__KDULh2S.webp"
+                alt="Valmiki Nagar">
+
+            <img src="https://t3.ftcdn.net/jpg/00/86/33/28/360_F_86332883_ZXujI7IQL8PtKEBILcFrJilWHSIjAWIa.jpg"
+                alt="Rajgir">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI9viwhGauSlH51Y-EL7Bb5YLNuotzfux7-nAFOdZFm7SPgKCfOc6vJmoE&s=10"
+                alt="Bihar">
+
+            <img src="https://cdn.exoticindia.com/articlebodies/files/1724241108.jpg" alt="Bihar Culture">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/A_Classical_Dance_in_Bihar.jpg"
+                alt="Bihar Dance">
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                         CONTACT
+===================================================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <p>PLAN YOUR JOURNEY</p>
+
+            <h2>Contact Us</h2>
+
+        </div>
+
+
+        <form id="contactForm" onsubmit="submitForm(event)">
+
+            <div class="input-row">
+
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <input type="email" id="email" placeholder="Your Email" required>
+
+            </div>
+
+
+            <input type="text" id="place" placeholder="Destination you want to visit" required>
+
+
+            <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =====================================================
+                          FOOTER
+===================================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>
+                    Bihar<span>Tourism</span>
+                </h2>
+
+                <p>
+                    Discover the beauty, history and culture of Bihar.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>📍 Bihar, India</p>
+                <p>📧 info@bihartourism.com</p>
+                <p>📞 +91 98765 43210</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Bihar Tourism. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+                 DESTINATION DETAILS MODAL
+===================================================== -->
+
+    <div class="destination-modal" id="destinationModal">
+
+        <div class="destination-modal-content">
+
+            <button class="destination-close" onclick="closeDestination()">
+                ×
+            </button>
+
+
+            <!-- Destination Header -->
+
+            <div class="destination-header">
+
+                <img id="destinationMainImage" src="" alt="Destination">
+
+                <div class="destination-header-text">
+
+                    <span class="modal-label">
+                        BIHAR TOURISM
+                    </span>
+
+                    <h1 id="destinationTitle">
+                    </h1>
+
+                    <p id="destinationDescription">
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Main Information -->
+
+            <div class="destination-info">
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <strong>Location</strong>
+                        <p id="destinationLocation"></p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        📞
+                    </div>
+
+                    <div>
+                        <strong>Tourism Contact</strong>
+                        <p id="destinationContact"></p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        🏨
+                    </div>
+
+                    <div>
+                        <strong>Hotel</strong>
+                        <p id="destinationHotels"></p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <div class="info-icon">
+                        🚐
+                    </div>
+
+                    <div>
+                        <strong>Tourist Van</strong>
+                        <p id="destinationTransport"></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Places Heading -->
+
+            <div class="places-title">
+
+                <span>
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Places to Visit
+                </h2>
+
+            </div>
+
+
+            <!-- JavaScript automatically puts places here -->
+
+            <div class="places-grid" id="placesGrid">
+            </div>
+
+
+            <div class="modal-bottom">
+
+                <button class="btn" onclick="closeDestination()">
+                    Close Details
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+                       JAVASCRIPT LINK
+===================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
